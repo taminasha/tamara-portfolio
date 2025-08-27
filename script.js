@@ -10,10 +10,20 @@ document.addEventListener('DOMContentLoaded', () => {
   menuToggle.addEventListener('click', () => {
     navMenu.classList.toggle('show');
   });
-  // Close mobile menu when a link is clicked
+  // Smooth scroll to section and close mobile menu when a nav link is clicked
   navLinks.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+      // prevent default anchor jump behaviour
+      e.preventDefault();
+      // Close the mobile nav if open
       navMenu.classList.remove('show');
+      // Determine the target section from the href attribute
+      const targetId = link.getAttribute('href').replace('#', '');
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        // Scroll smoothly to the section
+        targetEl.scrollIntoView({ behavior: 'smooth' });
+      }
     });
   });
 
