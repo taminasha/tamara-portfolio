@@ -303,6 +303,37 @@ nav.scrolled {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
 }
 
+/* Interests section */
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.interest-card {
+  background-color: var(--light-color);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.interest-card i {
+  font-size: 1.75rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+.interest-card span {
+  display: block;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+.interest-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
 /* Contact section */
 .contact-card {
   max-width: 600px;

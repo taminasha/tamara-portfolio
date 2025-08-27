@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.timeline-item, .skills-grid .skill-card, .contact-card').forEach(el => {
+  document.querySelectorAll('.timeline-item, .skills-grid .skill-card, .interests-grid .interest-card, .contact-card').forEach(el => {
     el.classList.add('hidden');
     observer.observe(el);
   });
